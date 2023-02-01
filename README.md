@@ -99,7 +99,7 @@ Clicking the [Like] button of an movie (on the Movie Details page) should make a
 
 •	[Like] button changes to [Liked {number of likes}] span so users can‘t like a movie multiple times.
 
-###### 9- Edit movie:
+###### 9- Delete movie:
 Logged-in users should be able to delete their movies. After successful movie delete the Home page should be shown.
 
-###### 10- Delete movie: TO DO!!
+###### 10- Edit movie: TO DO!!
