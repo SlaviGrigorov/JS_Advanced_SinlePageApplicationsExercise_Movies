@@ -1,3 +1,4 @@
+import { deleteMovie } from "./delete.js";
 import { loggedInUser, showView } from "./util.js";
 
 const section = document.querySelector('#movie-example');
@@ -42,8 +43,13 @@ function createMovieCard(movie, likes, liked) {
 </div>`
 
 const likeButton = divElement.querySelector('.like-btn');
+const deleteButton = divElement.querySelector('.del-btn');
+
 if(likeButton) {
     likeButton.addEventListener('click', (e) => likeMovie(e, movie._id));
+}
+if(deleteButton) {
+    deleteButton.addEventListener('click', (e) => deleteMovie(e, movie._id));
 }
 
 return divElement;
@@ -56,7 +62,7 @@ function createControls(movie, likes, liked) {
 
     if (isOwner) {
         return `
-        <a class="btn btn-danger" href="#">Delete</a>
+        <a class="btn btn-danger del-btn" href="#">Delete</a>
         <a class="btn btn-warning" href="#">Edit</a>
         `;
     } else if(!liked){

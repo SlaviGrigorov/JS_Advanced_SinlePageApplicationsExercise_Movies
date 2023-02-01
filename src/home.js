@@ -8,7 +8,6 @@ catalog.addEventListener('click', (e) => {
     if(e.target.tagName == "BUTTON") {
         e.preventDefault();
         const id = e.target.dataset.id;
-        // console.log(id);
         detailsPage(id);
     }
 })
